@@ -9,40 +9,40 @@ namespace C1_1.Models
     [Table("afiliado")]
     public class Formulario
     {
-
+        [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("id")]
-        public int ID {get;set;}
+        public int id {get;set;}
         
         [Required(ErrorMessage = "Por favor ingrese Nombre")]
-        [Display(Name="Nombre_Est")]
+        [Display(Name="nombre")]
          [Column("nombre")]
-        public String Nombre_Est { get; set; }
+        public String nombre { get; set; }
 
         [Required(ErrorMessage = "Por favor ingrese Apellido")]
-        [Display(Name="Apellido_Est")]
+        [Display(Name="apellido")]
          [Column("apellido")]
-        public String Apellido_Est { get; set; }
+        public String apellido { get; set; }
 
-            [Display(Name="Distrito")]
+            [Display(Name="distrito")]
              [Column("distrito")]
-        public String Distrito { get; set; }
+        public String distrito { get; set; }
 
-            [Display(Name="Banco")]
+            [Display(Name="banco")]
              [Column("banco")]
-        public String Banco { get; set; }
+        public String banco { get; set; }
         
-            [Display(Name="Edad")]
+            [Display(Name="edad")]
              [Column("edad")]
-        public String Edad { get; set; }
+        public String edad { get; set; }
 
-        [Display(Name="Genero")]
+        [Display(Name="genero")]
          [Column("genero")]
-        public String Genero { get; set; }
+        public String genero { get; set; }
 
-        [Display(Name="Autor")]
+        [Display(Name="autor")]
          [Column("autor")]
-        public String Autor { get; set; }
+        public String autor { get; set; }
 
 
         [NotMapped]
