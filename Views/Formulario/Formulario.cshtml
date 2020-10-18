@@ -1,0 +1,61 @@
+@model C1_1.Models.Formulario;
+
+@{
+    ViewData["Title"] = "Formulario Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Hecho por Robert Gutierrez</h1>
+    <form asp-controller="Formulario" asp-action="Registrar">
+        <hr>
+       
+    <div class="form-group">
+            
+            <label>Nombre:</label>
+            <input class="form-control" asp-for="Nombre_Est"/>
+            <br>
+
+            <label>Apellido:</label>
+            <input  class="form-control" asp-for="Apellido_Est"/>
+            <br>
+            <label>Distrito:</label>
+            <input  class="form-control" asp-for="Distrito"/>
+            <br>
+
+            <label>Banco</label>
+            <select asp-for="Banco">
+                <option value="BCP">BCP</option>
+                <option value="Banco_de_la_nacion">Banco de la nacion</option>
+                <option value="Interbank">Interbank</option>
+                <option value="Scotiabank">Scotiabank</option>
+            </select>
+            <br>
+            <label>Edad:</label>
+            <input  class="form-control" asp-for="Edad"/>
+            <br>
+             <label>Genero:</label>
+             <br>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="Genero" id="inlineRadio1" value="option1" asp-for=Autor>
+             <label class="form-check-label" for="inlineRadio1">Masculino</label>
+        </div>
+        <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="Genero" id="inlineRadio1" value="option2" asp-for=Autor>
+             <label class="form-check-label" for="inlineRadio1">Femenino</label>
+        </div>
+            <br>
+            <label>Autor:</label>
+            <input  class="form-control" asp-for="Autor"/>
+            <br>
+
+            
+            <button type="imput" class="btn btn-dark" value="Registrar">Registrar</button>
+            <br>
+        
+    </form>
+    <br>
+    
+    <td>@Html.DisplayNameFor(model => model.Respuesta)</td>
+    <td>@Html.DisplayTextFor(model => model.Respuesta)</td>
+
+</div>
